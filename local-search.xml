@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Vim实用技巧</title>
+    <link href="/2020/03/08/Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <url>/2020/03/08/Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    
+    <content type="html"><![CDATA[<h1 id="第一章-Vim解决问题的方式"><a href="#第一章-Vim解决问题的方式" class="headerlink" title="第一章 Vim解决问题的方式"></a>第一章 Vim解决问题的方式</h1><p>  Vim对重复性操作进行优化，它会记录我们最近的操作，让我们用一次按键就能重复上的修改。</p><ol><li>认识.命令（重复上次的修改）<ul><li>普通模式 下的修改(i.e. x, dd)</li><li>插入模式 </li></ul></li><li>不要自我重复<ul><li>普通模式 A字符相当于$a, vim中有很多这样的命令</li></ul></li><li><h2 id="以退为进"><a href="#以退为进" class="headerlink" title="以退为进"></a>以退为进</h2></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>computer science</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2020/03/08/hello-world/"/>
     <url>/2020/03/08/hello-world/</url>
