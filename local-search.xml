@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>How to Read Code?</title>
+    <link href="/2020/03/13/readcode/"/>
+    <url>/2020/03/13/readcode/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><ul><li>从后往前读  </li><li>多读好代码  </li></ul><h1 id="二-top-down-amp-amp-bottom-up"><a href="#二-top-down-amp-amp-bottom-up" class="headerlink" title="二 top-down &amp;&amp; bottom-up"></a>二 top-down &amp;&amp; bottom-up</h1><ul><li><p><strong><em>top-down</em></strong>模式：<br>静态跟着代码看，或者用debugger看，每次出现函数调用就记录下函数的执行层次，比如</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">func1()  </span><br><span class="line">  func2()  </span><br><span class="line">    func()  </span><br><span class="line">  func3()</span><br></pre></td></tr></table></figure><p>自己可以根据需要增加信息</p></li><li><p><strong><em>bottom-up</em></strong>模式<br>一直深入到最底层，给能了解作用的底层函数一个个的写文档，这个文档是完全底层的观点。</p></li><li><p>模式间不停的转换和细化</p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>methodology</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Vim实用技巧</title>
     <link href="/2020/03/08/Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <url>/2020/03/08/Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
