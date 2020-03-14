@@ -142,7 +142,7 @@
                   
                   <span class="post-meta">
                     <i class="far fa-chart-bar"></i>
-                    280 字
+                    935 字
                   </span>
                 
 
@@ -150,7 +150,7 @@
                   
                   <span class="post-meta">
                       <i class="far fa-clock"></i>
-                      1 分钟
+                      3 分钟
                   </span>
                 
 
@@ -184,44 +184,109 @@
         <div class="post-content mx-auto" id="post">
           
           <div class="markdown-body">
-            <p><u> 入门Linux，暂时参考来源：<a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html" target="_blank" rel="noopener">https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html</a> </u></p>
-<h1 id="一、命令帮助"><a href="#一、命令帮助" class="headerlink" title="一、命令帮助"></a>一、命令帮助</h1><ul>
-<li>在只记得部分命令关键字的场合，我们可以通过man -k来搜索；<blockquote>
-<p><code>man [command]</code></p>
-</blockquote>
-</li>
-<li>需要知道某个命令的简要说明，可以通过whatis；而更详细的介绍，可以用info命令；<blockquote>
-<p><code>whatis [command]</code><br><code>info [command]</code></p>
-</blockquote>
-</li>
-<li>查看命令的位置可以使用which<blockquote>
-<p><code>which [command]</code>  查看程序的安装路径<br><code>whereis [command]</code>  查看程序的搜索路径，当系统中安装了统一软件的多版本时可以使用这个命令</p>
-</blockquote>
-</li>
-<li>man也可以用来查看命令的具体参数以及使用方法</li>
-</ul>
-<h1 id="二、文件以及目录管理"><a href="#二、文件以及目录管理" class="headerlink" title="二、文件以及目录管理"></a>二、文件以及目录管理</h1><ol>
-<li>创建和删除<ul>
-<li>创建： mkdir</li>
-<li>删除： rm</li>
-<li>删除非空目录： rm -rf [filename]</li>
-<li>删除日志： rm *log</li>
-<li>移动： mv</li>
-<li>复制： cp</li>
-<li>复制目录： cp -r</li>
+            <h1 id="Chapter-1-预备知识"><a href="#Chapter-1-预备知识" class="headerlink" title="Chapter 1 - 预备知识"></a>Chapter 1 - 预备知识</h1><h2 id="Section-1-什么是计算机？"><a href="#Section-1-什么是计算机？" class="headerlink" title="Section 1 - 什么是计算机？"></a>Section 1 - 什么是计算机？</h2><p>计算机硬件五大单元:</p>
+<ul>
+<li>输入单元</li>
+<li>输出单元</li>
+<li>CPU: <ul>
+<li>控制单元</li>
+<li>算数逻辑单元</li>
+<li>主存储器</li>
 </ul>
 </li>
-<li>目录切换 </li>
-<li>列出目录项目</li>
-<li>查找目录及文件</li>
-<li>查看文件内容</li>
-<li>查找文件内容</li>
-<li>文件与目录权限修改</li>
-<li>给文件增加别名</li>
-<li>管道和重定向</li>
-<li>设置环境变量</li>
-<li>Bash快捷输入或删除</li>
-<li>综合应用</li>
+</ul>
+<p>两种不同的CPU架构:</p>
+<ul>
+<li>精简指令集（RISC）</li>
+<li>复杂指令集（CISC）</li>
+</ul>
+<p>其他单元设备:</p>
+<ul>
+<li>系统单元</li>
+<li>主存储器（main memory, RAM）与辅助内存</li>
+<li>输入、输出单元</li>
+</ul>
+<h2 id="Section-2-计算机上常用相关单位"><a href="#Section-2-计算机上常用相关单位" class="headerlink" title="Section 2 - 计算机上常用相关单位:"></a>Section 2 - 计算机上常用相关单位:</h2><ul>
+<li>容量单位<br>计算机对数据的判断依据为是否通电，所以其只认识0和1。我们称这个二进制单位为bit，但由于这样单位太小，定义1 Byte = 8 bit，同理定义1K = 1024Byte, 按此规则依次定义单位M-&gt;G-&gt;T-&gt;P-&gt;E</li>
+<li>速度单位<br>Hz 秒分之一|</li>
+</ul>
+<h2 id="Section-3-个人计算机相关组件"><a href="#Section-3-个人计算机相关组件" class="headerlink" title="Section 3 - 个人计算机相关组件:"></a>Section 3 - 个人计算机相关组件:</h2><ul>
+<li>早期芯片组通常用南北桥来沟通各组件。<ul>
+<li>北桥: 负责CPU、主存储器以及显示适配器界面的沟通。</li>
+<li>南桥: 负责链接速度较慢的装置接口，如硬盘，USB，网络卡等。</li>
+</ul>
+</li>
+<li>现在则将北桥整合到CPU中，以求得更快的速度和更少的带宽消耗。</li>
+</ul>
+<ol>
+<li><p>CPU</p>
+<ul>
+<li>需要散热，目前双核更普遍，不同CPU有不同脚位与不同主板配对，影响CPU效能的有CPU内部的微指令集以及CPU的频率（目前只能用来比较同款CPU速度）。</li>
+<li>北桥时代外频: CPU与外部组件进行传输时的速度，倍频:CPU内部用来加速工作的一个倍数。两者相乘则为CPU频率速度; 现在则已经将北桥整合到CPU中，链接他们的有Intel中的QPI与DMI技术或AMD的Hyper Transport了<br>前端总线速度:CPU内的内存控制芯片与主存储器间的传输速度，可以知晓主存储器提供的数据量。</li>
+<li>CPU等级: 向下兼容</li>
+<li>超线程（Hyper Threading）:由于运算核心经常处于闲置状态下，可以让两个程序同时竞争CPU的运算单元。</li>
+</ul>
+</li>
+<li><p>内存</p>
+<p>个人计算机主要为动态随机存取内存(Dynamic Random Access Memory, DRAM)，只有在通电时才能记录与使用，断电后数据就消失了。需要考虑频率，带宽，型号，容量。</p>
+<ul>
+<li>多通道设计: 一种设计理念，即将两个主存器汇整在一起，来增加主存器的数据宽度。实际操作中（双通道），将两根相同容量的相同的主存储器插在相同颜色的槽中。</li>
+<li>DRAM与SRAM</li>
+<li>只读存储器（ROM）:没有通电时也能将数据记录下来</li>
+</ul>
+</li>
+<li><p>显示适配器</p>
+<p>参数: 分辨率，颜色深度，运算能力</p>
+<ul>
+<li>接口: VGA，DVI，HDMI，Display Port</li>
+</ul>
+</li>
+<li><p>硬盘与存储设备</p>
+<p>硬盘，软盘，DVD，CD，磁带……</p>
+<ul>
+<li>硬盘的物理组成: 许多圆形磁盘盘，机械手臂，磁盘读取头，主轴马达</li>
+<li>磁盘上的数据: 扇区，磁道，磁柱</li>
+<li>传输界面：<ul>
+<li>SATA界面</li>
+<li></li>
+<li></li>
+</ul>
+</li>
+<li>固态硬盘:  </li>
+</ul>
+</li>
+<li><p>扩充卡与界面</p>
+</li>
+<li><p>主板</p>
+</li>
+<li><p>电源供应器</p>
+</li>
+</ol>
+<h2 id="Section-4-数据表示方式"><a href="#Section-4-数据表示方式" class="headerlink" title="Section 4 - 数据表示方式:"></a>Section 4 - 数据表示方式:</h2><ul>
+<li>文字系统: 二进制与其他进制的转换</li>
+<li>文字编码系统: 英文编码表ASCII系统；中文big5编码表；Unicode编码系统</li>
+</ul>
+<h2 id="Section-5-软件程序运作"><a href="#Section-5-软件程序运作" class="headerlink" title="Section 5 - 软件程序运作"></a>Section 5 - 软件程序运作</h2><ol>
+<li>机器程序与编译程序</li>
+</ol>
+<p>机器语言–高级程序语言</p>
+<ol start="2">
+<li>操作系统</li>
+</ol>
+<p>管理计算机中所有活动以及驱动系统中所有硬件</p>
+<ul>
+<li>核心功能<ul>
+<li>系统呼叫接口</li>
+<li>程序管理</li>
+<li>内存管理</li>
+<li>文件系统管理</li>
+<li>装置的驱动</li>
+</ul>
+</li>
+<li>驱动程序<br>硬件开发商根据操作系统提供的接口开发适合自己硬件产品的驱动程序来驱动此硬件</li>
+</ul>
+<ol start="3">
+<li>应用程序</li>
 </ol>
 
             <hr>
