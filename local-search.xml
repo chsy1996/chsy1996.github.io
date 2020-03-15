@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>我对Linux的理解</title>
+    <link href="/2020/03/15/linux/"/>
+    <url>/2020/03/15/linux/</url>
+    
+    <content type="html"><![CDATA[<h1 id="概观"><a href="#概观" class="headerlink" title="概观"></a>概观</h1><h1 id="基础命令和目录结构"><a href="#基础命令和目录结构" class="headerlink" title="基础命令和目录结构"></a>基础命令和目录结构</h1><h1 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h1><h1 id="硬盘和文件系统"><a href="#硬盘和文件系统" class="headerlink" title="硬盘和文件系统"></a>硬盘和文件系统</h1><h1 id="Linux内核的启动"><a href="#Linux内核的启动" class="headerlink" title="Linux内核的启动"></a>Linux内核的启动</h1><h1 id="用户空间的启动"><a href="#用户空间的启动" class="headerlink" title="用户空间的启动"></a>用户空间的启动</h1><h1 id="系统配置：日志、系统时间、批处理任务和用户"><a href="#系统配置：日志、系统时间、批处理任务和用户" class="headerlink" title="系统配置：日志、系统时间、批处理任务和用户"></a>系统配置：日志、系统时间、批处理任务和用户</h1><h1 id="进程与资源利用详解"><a href="#进程与资源利用详解" class="headerlink" title="进程与资源利用详解"></a>进程与资源利用详解</h1><h1 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h1><h1 id="网络应用与服务"><a href="#网络应用与服务" class="headerlink" title="网络应用与服务"></a>网络应用与服务</h1><h1 id="shell脚本"><a href="#shell脚本" class="headerlink" title="shell脚本"></a>shell脚本</h1><h1 id="在网络上传输文件"><a href="#在网络上传输文件" class="headerlink" title="在网络上传输文件"></a>在网络上传输文件</h1><h1 id="Linux桌面概览"><a href="#Linux桌面概览" class="headerlink" title="Linux桌面概览"></a>Linux桌面概览</h1><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><h1 id="从c代码编译出软件"><a href="#从c代码编译出软件" class="headerlink" title="从c代码编译出软件"></a>从c代码编译出软件</h1><h1 id="在基础上搭建"><a href="#在基础上搭建" class="headerlink" title="在基础上搭建"></a>在基础上搭建</h1>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>How to Read Code?</title>
     <link href="/2020/03/13/readcode/"/>
     <url>/2020/03/13/readcode/</url>
