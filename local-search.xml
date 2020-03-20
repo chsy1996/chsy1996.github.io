@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>PyTorch</title>
+    <link href="/2020/03/19/PyTorch/"/>
+    <url>/2020/03/19/PyTorch/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Data-Prepare"><a href="#Data-Prepare" class="headerlink" title="Data Prepare"></a>Data Prepare</h1><p>DataLoader(dataset, batch_size=1, shuffle=False, sampler=None,<br>           batch_sampler=None, num_workers=0, collate_fn=None,<br>           pin_memory=False, drop_last=False, timeout=0,<br>           worker_init_fn=None)</p><p>dataset: support two different types of dataset(<strong>map-style</strong> and <strong>iterable-style</strong>)</p><ol><li>map-style datasets: subclass of torch.utils.data.Dataset<ul><li>overwrite <strong>getitem()</strong> to supporte fethcing a data for a given key.</li><li>overwrite <strong>len()</strong> method to return the size of the dataset by many Sampler implementations and the default options of Dataloader.</li></ul></li><li>iterable-style datasets</li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我对Linux的理解</title>
     <link href="/2020/03/15/linux/"/>
     <url>/2020/03/15/linux/</url>
